@@ -1,7 +1,12 @@
 # Unix
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
 alias ll="ls -al"
 alias ln="ln -v"
-alias mkdir="mkdir -p"
+alias mkdirp="mkdir -p"
 alias e="$EDITOR"
 alias v="$VISUAL"
 
@@ -14,6 +19,11 @@ alias s="rspec"
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
+
+export PS1="\[\e[0;93m\]\h\[\e[m\]:"
+export PS1+="\[\e[0;91m\]\u\[\e[m\] "
+export PS1+="\[\e[0;92m\]\w\[\e[m\] "
+export PS1+="[\[\e[0;94m\]\t\[\e[m\]]\$ "
 
 # Include custom aliases
 if [[ -f ~/.aliases.local ]]; then
